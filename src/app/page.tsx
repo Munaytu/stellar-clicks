@@ -11,6 +11,9 @@ import { useToast } from "@/hooks/use-toast";
 import { handleUserClick } from './actions';
 import type { AnalyzeClickPatternsOutput } from '@/ai/flows/analyze-click-patterns';
 
+const slothImage1 = "https://i.imgur.com/eA2z6I1.png";
+const slothImage2 = "https://i.imgur.com/gTciTEs.png";
+
 export default function Home() {
   const [userClicks, setUserClicks] = useState(0);
   const [globalClicks, setGlobalClicks] = useState(123456789);
@@ -18,6 +21,7 @@ export default function Home() {
   const [publicKey, setPublicKey] = useState("");
   const [isConnecting, setIsConnecting] = useState(false);
   const [clickTimestamps, setClickTimestamps] = useState<number[]>([]);
+  const [currentSlothImage, setCurrentSlothImage] = useState(slothImage1);
   const { toast } = useToast();
 
   const handleConnectWallet = () => {
@@ -53,6 +57,7 @@ export default function Home() {
   const onUserClick = useCallback(async () => {
     setUserClicks(prev => prev + 1);
     setGlobalClicks(prev => prev + 1);
+    setCurrentSlothImage(prev => prev === slothImage1 ? slothImage2 : slothImage1);
     
     const now = Date.now();
     const updatedTimestamps = [...clickTimestamps, now].slice(-20); // Keep last 20 clicks for analysis
@@ -129,7 +134,7 @@ export default function Home() {
               className="group rounded-full bg-card shadow-lg w-48 h-48 sm:w-64 sm:h-64 flex items-center justify-center transition-transform duration-150 ease-in-out active:scale-90 focus:outline-none focus:ring-4 focus:ring-primary/50"
               aria-label="Click to increment score"
             >
-              <Image src="https://i.imgur.com/eA2z6I1.png" alt="Sloth and UFO" width={128} height={128} className="w-24 h-24 sm:w-32 sm:h-32 transition-transform duration-300 ease-in-out group-hover:scale-110" />
+              <Image src={currentSlothImage} alt="Sloth" width={128} height={128} className="w-24 h-24 sm:w-32 sm:h-32 transition-transform duration-300 ease-in-out group-hover:scale-110" />
             </button>
         </div>
 
