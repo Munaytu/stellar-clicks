@@ -1,10 +1,11 @@
 "use client";
 
 import { useState, useEffect, useCallback } from 'react';
+import Image from 'next/image';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
-import { Rocket, Wallet, Bot, Trophy } from 'lucide-react';
+import { Wallet, Bot, Trophy } from 'lucide-react';
 import { Leaderboard } from '@/components/Leaderboard';
 import { useToast } from "@/hooks/use-toast";
 import { handleUserClick } from './actions';
@@ -128,7 +129,7 @@ export default function Home() {
               className="group rounded-full bg-card shadow-lg w-48 h-48 sm:w-64 sm:h-64 flex items-center justify-center transition-transform duration-150 ease-in-out active:scale-90 focus:outline-none focus:ring-4 focus:ring-primary/50"
               aria-label="Click to increment score"
             >
-              <Rocket className="w-24 h-24 sm:w-32 sm:h-32 text-primary transition-transform duration-300 ease-in-out group-hover:scale-110" />
+              <Image src="https://i.imgur.com/eA2z6I1.png" alt="Sloth and UFO" width={128} height={128} className="w-24 h-24 sm:w-32 sm:h-32 transition-transform duration-300 ease-in-out group-hover:scale-110" />
             </button>
         </div>
 
