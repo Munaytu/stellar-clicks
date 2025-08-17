@@ -11,16 +11,13 @@ import {
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Trophy } from "lucide-react";
 
-// Mock data for the leaderboard
+// Datos simulados para la tabla de clasificación
 const leaderboardData = [
-  { rank: 1, user: "GDQJ...L5XN", clicks: 1234567 },
-  { rank: 2, user: "GAI3...T7B4", clicks: 1198765 },
-  { rank: 3, user: "GC2B...QWXY", clicks: 1054321 },
-  { rank: 4, user: "GDRS...PK7A", clicks: 987654 },
-  { rank: 5, user: "GB7C...Z2K3", clicks: 950123 },
-  { rank: 6, user: "GABZ...LMNP", clicks: 888888 },
-  { rank: 7, user: "GFKH...RSTV", clicks: 812345 },
-  { rank: 8, user: "GCEY...WXYZ", clicks: 777777 },
+  { rank: 1, user: "Perezoso Alfa", clicks: 1234567 },
+  { rank: 2, user: "Clickeador Cósmico", clicks: 1198765 },
+  { rank: 3, user: "Maestro de la Siesta", clicks: 1054321 },
+  { rank: 4, user: "Soñador Supremo", clicks: 987654 },
+  { rank: 5, user: "Perezoso Veloz", clicks: 950123 },
 ];
 
 export function Leaderboard() {
@@ -29,19 +26,19 @@ export function Leaderboard() {
       <CardHeader>
         <div className="flex items-center gap-2">
           <Trophy className="w-6 h-6 text-primary" />
-          <CardTitle className="font-headline text-2xl">Leaderboard</CardTitle>
+          <CardTitle className="font-headline text-2xl">Tabla de Clasificación</CardTitle>
         </div>
         <CardDescription>
-          Top clickers on the Stellar network! Updated every 5 minutes.
+          Los mejores clickeadores del reino de los perezosos.
         </CardDescription>
       </CardHeader>
       <CardContent>
         <Table>
           <TableHeader>
             <TableRow>
-              <TableHead className="w-[80px]">Rank</TableHead>
-              <TableHead>User</TableHead>
-              <TableHead className="text-right">Clicks</TableHead>
+              <TableHead className="w-[80px]">Rango</TableHead>
+              <TableHead>Usuario</TableHead>
+              <TableHead className="text-right">Clics</TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>
