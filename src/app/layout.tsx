@@ -3,8 +3,8 @@ import './globals.css';
 import { Toaster } from "@/components/ui/toaster"
 
 export const metadata: Metadata = {
-  title: 'Sloth Clicker',
-  description: '¡Haz clic en el perezoso para ganar puntos!',
+  title: 'Stellar Clicker',
+  description: 'Un juego Web3 casual sobre hacer clics y ganar recompensas tokenizadas.',
 };
 
 export default function RootLayout({
