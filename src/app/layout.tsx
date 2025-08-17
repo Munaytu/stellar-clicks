@@ -3,6 +3,7 @@ import './globals.css';
 import { Toaster } from "@/components/ui/toaster";
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
+import { Providers } from './providers';
 
 export const metadata: Metadata = {
   title: 'Sonic Flow',
@@ -22,12 +23,14 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Space+Grotesk:wght@700&family=Source+Code+Pro:wght@400;700&display=swap" rel="stylesheet" />
       </head>
       <body className="font-body antialiased flex flex-col min-h-screen bg-background text-foreground">
-        <Header />
-        <main className="flex-grow flex flex-col">
-          {children}
-        </main>
-        <Footer />
-        <Toaster />
+        <Providers>
+          <Header />
+          <main className="flex-grow flex flex-col">
+            {children}
+          </main>
+          <Footer />
+          <Toaster />
+        </Providers>
       </body>
     </html>
   );

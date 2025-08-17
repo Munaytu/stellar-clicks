@@ -1,7 +1,7 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
 import { Waves } from "lucide-react";
+import { WalletConnect } from "@/components/wallet/WalletConnect";
 
 export function Header() {
   return (
@@ -11,7 +11,7 @@ export function Header() {
           <Waves className="w-8 h-8 text-primary" />
           <h1 className="font-headline text-2xl md:text-3xl font-bold">Sonic Flow</h1>
         </div>
-        <Button variant="outline">Conectar Wallet</Button>
+        <WalletConnect />
       </div>
     </header>
   );
