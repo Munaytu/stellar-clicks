@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect, useCallback } from 'react';
-import Image from 'next/image';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
@@ -9,20 +8,15 @@ import { Trophy, Zap } from 'lucide-react';
 import { Leaderboard } from '@/components/Leaderboard';
 import { useToast } from "@/hooks/use-toast";
 
-const slothImage1 = "https://i.imgur.com/eA2z6I1.png";
-const slothImage2 = "https://i.imgur.com/gTciTEs.png";
-
 export default function Home() {
   const [userClicks, setUserClicks] = useState(0);
   const [globalClicks, setGlobalClicks] = useState(123456789);
   const [clicksPerSecond, setClicksPerSecond] = useState(0);
-  const [currentSlothImage, setCurrentSlothImage] = useState(slothImage1);
   const { toast } = useToast();
 
   const handleSlothClick = useCallback(() => {
     setUserClicks(prev => prev + 1);
     setGlobalClicks(prev => prev + 1);
-    setCurrentSlothImage(prev => (prev === slothImage1 ? slothImage2 : slothImage1));
   }, []);
 
   const handleUpgrade = () => {
@@ -85,13 +79,15 @@ export default function Home() {
         </div>
 
         <div className="w-full max-w-md flex flex-col items-center justify-center gap-4 my-8">
-            <button
+            <Button
               onClick={handleSlothClick}
-              className="group rounded-full bg-card shadow-lg w-48 h-48 sm:w-64 sm:h-64 flex items-center justify-center transition-transform duration-150 ease-in-out active:scale-90 focus:outline-none focus:ring-4 focus:ring-primary/50"
+              className="group rounded-full shadow-lg w-48 h-48 sm:w-64 sm:h-64 flex items-center justify-center transition-transform duration-150 ease-in-out active:scale-90 focus:outline-none focus:ring-4 focus:ring-primary/50 text-2xl font-bold"
               aria-label="Click al perezoso"
+              size="lg"
+              variant="default"
             >
-              <Image src={currentSlothImage} alt="Perezoso" width={128} height={128} className="w-24 h-24 sm:w-32 sm:h-32 transition-transform duration-300 ease-in-out group-hover:scale-110" />
-            </button>
+              ¡Haz Clic!
+            </Button>
         </div>
 
         <Card className="w-full max-w-4xl">
