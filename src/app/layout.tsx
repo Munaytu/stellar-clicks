@@ -3,8 +3,8 @@ import './globals.css';
 import { Toaster } from "@/components/ui/toaster"
 
 export const metadata: Metadata = {
-  title: 'Stellar Clicker',
-  description: 'Un juego Web3 casual sobre hacer clics y ganar recompensas tokenizadas.',
+  title: 'Sonic Flow',
+  description: 'Un juego Web3 sobre encontrar tu ritmo y evolucionar sin prisa.',
 };
 
 export default function RootLayout({
@@ -13,7 +13,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es">
+    <html lang="es" className="dark">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
