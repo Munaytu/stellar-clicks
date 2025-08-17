@@ -13,11 +13,11 @@ import { Award } from "lucide-react";
 
 // Datos simulados para la tabla de clasificación
 const leaderboardData = [
-  { rank: 1, user: "0x1a2b...c3d4", energy: 1234567, reward: "🏆 Eco Raro" },
-  { rank: 2, user: "0x5e6f...g7h8", energy: 1198765, reward: "500 $FLOW" },
-  { rank: 3, user: "0x9i0j...k1l2", energy: 1054321, reward: "250 $FLOW" },
-  { rank: 4, user: "0x3m4n...o5p6", energy: 987654, reward: "100 $FLOW" },
-  { rank: 5, user: "0x7q8r...s9t0", energy: 950123, reward: "50 $FLOW" },
+  { rank: 1, user: "Maestro Zenon", energy: 1234567, reward: "🏆 Eco Raro" },
+  { rank: 2, user: "Viajero Astral", energy: 1198765, reward: "500 $FLOW" },
+  { rank: 3, user: "Susurro Cósmico", energy: 1054321, reward: "250 $FLOW" },
+  { rank: 4, user: "Navegante Estelar", energy: 987654, reward: "100 $FLOW" },
+  { rank: 5, user: "Oráculo del Flujo", energy: 950123, reward: "50 $FLOW" },
 ];
 
 export function Leaderboard() {
